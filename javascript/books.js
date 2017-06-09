@@ -61,4 +61,4 @@ var books = [
   },
 ]
 
-export default book
+export default books
