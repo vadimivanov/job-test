@@ -1,4 +1,4 @@
-import books from './books'
+const books = require('./books')
 
 const filterBooksWithTitleStartingWithA = (sortedBooks, callback) => {
   let filteredBooks
