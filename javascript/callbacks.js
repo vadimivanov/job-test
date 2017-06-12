@@ -13,7 +13,7 @@ const sortBooksAlphabetically = (books, callback) => {
 }
 
 const getBooksAsync = (callback) => {
-  setTimeout((books) => {
+  setTimeout(() => {
     callback(books, filterBooksWithTitleStartingWithA)
   }, 2000)
 }
