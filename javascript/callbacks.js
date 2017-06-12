@@ -1,4 +1,6 @@
-import books from './books'
+const books = require('./books')
+
+const print = result => console.log('Result:', result)
 
 const filterBooksWithTitleStartingWithA = (sortedBooks, callback) => {
   let filteredBooks
@@ -9,11 +11,11 @@ const filterBooksWithTitleStartingWithA = (sortedBooks, callback) => {
 const sortBooksAlphabetically = (books, callback) => {
   let sortedBooks
   /* sorting logic books */
-  return callback(sortedBooks)
+  return callback(sortedBooks, print)
 }
 
 const getBooksAsync = (callback) => {
-  setTimeout((books) => {
+  setTimeout(() => {
     callback(books, filterBooksWithTitleStartingWithA)
   }, 2000)
 }
