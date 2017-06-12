@@ -1,4 +1,4 @@
-var books = [
+const books = [
   {
     title: 'Nineteen Eighty-Four',
     author: 'George Orwell',
