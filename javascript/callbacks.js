@@ -1,7 +1,7 @@
-const books = require('./books')
-const sortBooksByRating = require('./order-books-by-ratings')
+const books = require('./books');
+const Ratings = require('./ratings');
 
-const print = result => console.log('Result:', result)
+const print = result => console.log('Result:', result);
 
 let filterBooksWithTitleStartingWithA = (sortedBooks) => {
     return new Promise((resolve, reject) => {
@@ -14,16 +14,14 @@ let filterBooksWithTitleStartingWithA = (sortedBooks) => {
 
 let sortBooksAlphabetically = (books) => {
     return new Promise((resolve, reject) => {
-        let sortedBooks = sortBooksByRating(books);
+        let sortedBooks = Ratings.getTopAuthors(3);
 
         resolve(sortedBooks);
         reject('No match result');
     })
 };
 
-setTimeout(() => {
-    sortBooksAlphabetically(books)
-        .then(sortedBooks => filterBooksWithTitleStartingWithA(sortedBooks))
-        .then(filteredBooks => print(filteredBooks))
-        .catch(error => console.log(error))
-}, 2000);
+sortBooksAlphabetically(books)
+    .then(sortedBooks => filterBooksWithTitleStartingWithA(sortedBooks))
+    .then(filteredBooks => print(filteredBooks))
+    .catch(error => console.log(error));
