@@ -1,3 +1,5 @@
+@import url("colors.css");
+
 .btn {
     font-weight: bold;
     font-size: 21px;
@@ -52,8 +54,8 @@
 }
 
 .system-message {
-    --system-message-color: #333;
-    --system-message-gradient: linear-gradient(45deg, gray, #333);
+    --system-message-color: var(--default-color);
+    --system-message-gradient: var(--default-gradient);
     padding: 60px 20px 40px;
     border-radius: 10px;
     background-image: var(--system-message-gradient);
@@ -79,14 +81,14 @@
 
 
 .system-message--warning {
-    --system-message-color: #fd6266;
-    --system-message-gradient: linear-gradient(45deg, #fd916a, #fd6266);
+    --system-message-color: var(--warning-color);
+    --system-message-gradient: var(--warning-gradient);
 }
 .system-message--danger {
-    --system-message-color: #d00269;
-    --system-message-gradient: linear-gradient(45deg, #f44f60, #d00269);
+    --system-message-color: var(--danger-color);
+    --system-message-gradient: var(--danger-gradient);
 }
 .system-message--success {
-    --system-message-color: #30cc71;
-    --system-message-gradient: linear-gradient(45deg, #6eecce, #30cc71);
+    --system-message-color: var(--success-color);
+    --system-message-gradient: var(--success-gradient);
 }
