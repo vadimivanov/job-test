@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  font-family: $font-family-main;
+  min-width: $min-width;
+}

@@ -1,0 +1,64 @@
+.wrapper{
+  max-width: 1200px;
+  background: #f3f4f6;
+  padding: 63px;
+  margin: auto;
+}
+
+.grid{
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
+    display: block;
+    &.block {
+      float: left;
+      width: 31%;
+      margin: 0 3% 0 0;
+      &:nth-last-child(1){
+        margin: 0;
+      }
+      &:after{
+        content: ' ';
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+
+.system-message {
+  --system-message-color: $default-color;
+  --system-message-gradient: $default-gradient;
+  padding: 60px 20px 40px;
+  border-radius: 10px;
+  background-image: var(--system-message-gradient);
+  text-align: center;
+  color: #fff;
+  margin: 0 auto 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+  &__heading {
+    font-size: 24px;
+  }
+  &__content {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 28px 0 50px;
+  }
+  &__footer {
+    font-size: 21px;
+  }
+  &__footer button {
+    color: var(--system-message-color);
+  }
+  &--warning {
+    --system-message-color: $warning-color;
+    --system-message-gradient: $warning-gradient;
+  }
+  &--danger {
+    --system-message-color: $danger-color;
+    --system-message-gradient: $danger-gradient;
+  }
+  &--success {
+    --system-message-color: $success-color;
+    --system-message-gradient: $success-gradient;
+  }
