@@ -1,5 +1,10 @@
 @import url("colors.css");
 
+body {
+    background: #fff;
+    font-family: Nunito;
+}
+
 .btn {
     font-weight: bold;
     font-size: 21px;
@@ -61,6 +66,7 @@
     background-image: var(--system-message-gradient);
     text-align: center;
     color: #fff;
+    font-family: Nunito;
     margin: 0 auto 20px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
